@@ -1,54 +1,56 @@
-<div class="conteudo">
+<div class="centralizar">
+    <h2 @animationLoad>Login:</h2>
+</div>
 
-    <h2>Login:</h2>
+<div class="centralizar">
 
     <form class="example-form" #loginForm="ngForm">
-
+        
         <mat-form-field class="example-full-width">
             <mat-label>Email</mat-label>
             <input type="email" matInput placeholder="Insira seu e-mail" [(ngModel)]="model.email" name="email"
-                #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-
+            #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            
         </mat-form-field>
-
+        
         <div class="errors-mode" *ngIf="email.invalid && (email.dirty || email.touched)">
-            <div *ngIf="email.errors.pattern">
+            <div *ngIf="email.errors.pattern" @animationOpacity>
                 <small>Email não válido.</small>
             </div>
-            <div *ngIf="email.errors.required">
+            <div *ngIf="email.errors.required" @animationOpacity>
                 <small>Email é necessário.</small>
             </div>
         </div>
-
+        
         <br>
-
+        
         <mat-form-field class="example-full-width">
             <mat-label>Senha</mat-label>
             <input type="password" matInput placeholder="Insira sua senha" [(ngModel)]="model.senha" name="senha"
-                #senha="ngModel" required minlength="6">
+            #senha="ngModel" required minlength="6">
         </mat-form-field>
-
+        
         <div class="errors-mode" *ngIf="senha.invalid && (senha.dirty || senha.touched)">
-            <div *ngIf="senha.errors.required">
+            <div *ngIf="senha.errors.required" @animationOpacity>
                 <small>Senha é necessária.</small>
             </div>
-            <div *ngIf="senha.errors.minlength">
+            <div *ngIf="senha.errors.minlength" @animationOpacity>
                 <small>Senha deve ter no mínimo 6 caracteres.</small>
             </div>
         </div>
-
+        
         <br>
         <br>
-
+        
         <button class="button-login" mat-raised-button color="primary" [disabled]="loginForm.invalid">
             Entrar
         </button>
-
+        
     </form>
-
+    
     <br>
     <br>
-
+    
     <a href="javascript:void(0)">Não é cadastrado ainda?</a>
-
+    
 </div>

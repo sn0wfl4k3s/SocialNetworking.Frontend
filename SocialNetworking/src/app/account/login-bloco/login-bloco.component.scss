@@ -3,6 +3,19 @@
     text-align: center;
 }
 
+.centralizar {
+    justify-content: center;
+    text-align: center;
+}
+
+.nao-centralizar {
+    justify-content: baseline;
+    text-align:initial;
+}
+
+
+
+
 .button-login {
     width: 14em;
     border-radius: 47px;
