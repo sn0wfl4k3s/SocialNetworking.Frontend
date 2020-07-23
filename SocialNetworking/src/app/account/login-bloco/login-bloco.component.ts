@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Login } from '../models/login';
+import { LoginRequest } from '../models/login-request';
 
 @Component({
   selector: 'app-login-bloco',
@@ -8,7 +8,7 @@ import { Login } from '../models/login';
 })
 export class LoginBlocoComponent implements OnInit {
 
-  model = new Login();
+  model = new LoginRequest();
 
   constructor() { }
 

@@ -1,4 +1,4 @@
-export class Login {
+export class LoginRequest {
     email: string;
     senha: string;
 }
