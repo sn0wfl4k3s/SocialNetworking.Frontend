@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginRequest } from '../models/login-request';
 import { opacityAnimation } from 'src/app/animations/opacidade.animation';
+import { LoginRequest } from 'src/app/models/login';
+import { AccountService } from 'src/app/services/account.service';
 
 @Component({
   selector: 'app-login-bloco',
@@ -12,9 +13,15 @@ export class LoginBlocoComponent implements OnInit {
 
   model = new LoginRequest();
 
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
   }
 
+  entrar() {
+    this.accountService.login(this.model)
+      .then(result => {
+        console.log(result);
+      });
+  }
 }

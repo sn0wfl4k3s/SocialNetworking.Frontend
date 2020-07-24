@@ -26,7 +26,7 @@
         
         <mat-form-field class="example-full-width">
             <mat-label>Senha</mat-label>
-            <input type="password" matInput placeholder="Insira sua senha" [(ngModel)]="model.senha" name="senha"
+            <input type="password" matInput placeholder="Insira sua senha" [(ngModel)]="model.password" name="senha"
             #senha="ngModel" required minlength="6">
         </mat-form-field>
         
@@ -42,7 +42,7 @@
         <br>
         <br>
         
-        <button class="button-login" mat-raised-button color="primary" [disabled]="loginForm.invalid">
+        <button class="button-login" mat-raised-button color="primary" [disabled]="loginForm.invalid" (click)="entrar()">
             Entrar
         </button>
         
