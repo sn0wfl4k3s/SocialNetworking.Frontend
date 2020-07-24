@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) }
+  { path: '', redirectTo: 'account', pathMatch: 'full'},
+  { path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

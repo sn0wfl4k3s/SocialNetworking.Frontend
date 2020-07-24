@@ -10,13 +10,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 import { FormsModule } from '@angular/forms';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { RegisterBlocoComponent } from './register-bloco/register-bloco.component';
 
 const routes: Routes = [
-  { path: '', component: LoginPageComponent }
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegisterPageComponent }
 ];
 
 @NgModule({
-  declarations: [LoginPageComponent, LoginBlocoComponent],
+  declarations: [LoginPageComponent, LoginBlocoComponent, RegisterPageComponent, RegisterBlocoComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
