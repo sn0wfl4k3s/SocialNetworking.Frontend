@@ -8,10 +8,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { FormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { RegisterBlocoComponent } from './register-bloco/register-bloco.component';
+import { LayoutModule } from '../layout/layout.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -28,7 +30,9 @@ const routes: Routes = [
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    MatSnackBarModule,
+    FormsModule,
+    LayoutModule
   ]
 })
 export class AccountModule { }

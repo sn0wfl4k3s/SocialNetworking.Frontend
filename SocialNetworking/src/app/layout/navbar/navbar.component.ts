@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { opacityAnimation } from 'src/app/animations/opacidade.animation';
 
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss'],
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
   animations: [opacityAnimation]
 })
-export class LoginPageComponent implements OnInit {
+export class NavbarComponent implements OnInit {
+
+  title = 'SocialNet';
 
   constructor() { }
 
