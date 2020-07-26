@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { FormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './register-page/register-page.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule,
     MatSnackBarModule,
+    MatGridListModule,
     FormsModule,
     LayoutModule
   ]

@@ -9,7 +9,7 @@
         <mat-form-field class="example-full-width">
             <mat-label>Email</mat-label>
             <input type="email" matInput placeholder="Insira seu e-mail" [(ngModel)]="model.email" name="email"
-            #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required autofocus>
             
         </mat-form-field>
         
@@ -54,5 +54,8 @@
     <a href="javascript:void(0)" [routerLink]="['/account/register']" routerLinkActive="router-link-active" >
         Não é cadastrado ainda?
     </a>
+    
+    <br>
+    <br>
     
 </div>

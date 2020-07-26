@@ -1,8 +1,20 @@
-.bloco {
+
+.background-login {
+    
+    height: 100vh;
+    
+    background-image: url('/assets/images/wallpaper1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.bloco-login {
     margin-left: auto;
     margin-right: auto;
-    
+
     width: 25em;
 
-    padding-top: 30px;
+    margin-top: 10vh;
+
 }
