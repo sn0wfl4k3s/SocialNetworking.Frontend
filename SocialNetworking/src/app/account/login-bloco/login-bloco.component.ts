@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { opacityAnimation } from 'src/app/animations/opacidade.animation';
 import { LoginRequest } from 'src/app/models/login';
 import { AccountService } from 'src/app/services/account.service';
+import { NgBlockUI, BlockUI } from 'ng-block-ui';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { LoginPageComponent } from '../login-page/login-page.component';
 
 @Component({
   selector: 'app-login-bloco',
@@ -13,15 +16,30 @@ export class LoginBlocoComponent implements OnInit {
 
   model = new LoginRequest();
 
-  constructor(private accountService: AccountService) { }
+  @BlockUI() blockUI: NgBlockUI;
+
+  constructor(
+    private accountService: AccountService,
+    private snackBar: MatSnackBar
+  ) { }
 
   ngOnInit(): void {
   }
 
   entrar() {
+    this.blockUI.start('Loding...');
     this.accountService.login(this.model)
-      .then(result => {
+      .then(async (result) => {
         console.log(result);
+        this.blockUI.stop();
+        this.snackBar.open('logado com sucesso!', '', {
+          duration: 2 * 1000,
+          horizontalPosition: 'end',
+          verticalPosition: 'bottom'
+        });
+      })
+      .catch(error => {
+        this.blockUI.stop();
       });
   }
 }

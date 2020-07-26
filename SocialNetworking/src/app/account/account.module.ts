@@ -16,6 +16,8 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 import { RegisterBlocoComponent } from './register-bloco/register-bloco.component';
 import { LayoutModule } from '../layout/layout.module';
 
+import { BlockUIModule } from 'ng-block-ui';
+
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginPageComponent },
@@ -34,7 +36,8 @@ const routes: Routes = [
     MatSnackBarModule,
     MatGridListModule,
     FormsModule,
-    LayoutModule
+    LayoutModule,
+    BlockUIModule.forRoot()
   ]
 })
 export class AccountModule { }
