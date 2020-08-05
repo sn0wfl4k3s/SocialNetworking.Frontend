@@ -4,7 +4,7 @@ import { LoginRequest } from 'src/app/models/login';
 import { AccountService } from 'src/app/services/account.service';
 import { NgBlockUI, BlockUI } from 'ng-block-ui';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { LoginPageComponent } from '../login-page/login-page.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-bloco',
@@ -20,7 +20,8 @@ export class LoginBlocoComponent implements OnInit {
 
   constructor(
     private accountService: AccountService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -37,6 +38,7 @@ export class LoginBlocoComponent implements OnInit {
           horizontalPosition: 'end',
           verticalPosition: 'bottom'
         });
+        this.router.navigate(['/home']);
       })
       .catch(error => {
         this.blockUI.stop();

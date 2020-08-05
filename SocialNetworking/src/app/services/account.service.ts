@@ -16,10 +16,10 @@ export class AccountService {
 
 
   async login(login: LoginRequest) {
-    const queryString = { Email: login.email, Password: login.password };
-    const result = await this.http.get<Response<LoginResponse>>(`${this.url}/Login`, { params: queryString }).toPromise();
+    const params = { Email: login.email, Password: login.password };
+    const result = await this.http.get<Response<LoginResponse>>(`${this.url}/Login`, { params }).toPromise();
+    localStorage.setItem('access_token', btoa(result.result.access_token));
     result.result.expires_in = new Date(result.result.expires_in);
-    localStorage.setItem('token', result.result.access_token);
     return result;
   }
 
