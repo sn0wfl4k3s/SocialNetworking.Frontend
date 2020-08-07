@@ -14,6 +14,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { RegisterBlocoComponent } from './register-bloco/register-bloco.component';
+
 import { LayoutModule } from '../layout/layout.module';
 
 import { BlockUIModule } from 'ng-block-ui';

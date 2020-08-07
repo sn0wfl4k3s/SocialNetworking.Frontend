@@ -1,10 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 // --------------------------
 .errors-mode {
     color: red;
     font-size: 12px;
- }
+}
+
+
+// themes
+.light-theme {
+    animation: background-color 0.5s infinite;
+    background-color: white;
+    color: black;
+
+    .option-left-sidebar {
+        border-radius: 50px;
+        background-color: rgb(249, 249, 249);
+        // border-width: 0.01px;
+        // border-style: solid;
+    
+        width: fit-content;
+    }
+    
+    .option-left-sidebar:hover{
+        border-color: blue;
+        color: rgb(68, 68, 245);
+    }
+    
+    .current-option {
+        color:rgb(0, 0, 141);
+    }
+
+    .home-bloco-content {
+        border-left: .01px solid lightgray;
+        border-right: .01px solid lightgray;
+        height: 100vh;
+    }
+
+    hr {
+        background-color: lightgray;
+    }
+}
+
+
+
+.dark-theme {
+    animation: background-color 0.5s infinite;
+    background-color: black;
+    color: white;
+
+    .option-left-sidebar {
+        border-radius: 70px;
+        // background-color: rgb(41, 41, 41);
+        // border-width: 0.01px;
+        // border-style: solid;
+        
+        width: fit-content;
+    }
+    
+    .option-left-sidebar:hover{
+        background-color: rgb(17, 17, 17);
+        color:rgb(47, 168, 209);
+    }
+    
+    .current-option {
+        color:rgb(51, 189, 235);
+    }
+
+    .home-bloco-content {
+        border-left: .01px solid rgb(41, 41, 41);
+        border-right: .01px solid rgb(41, 41, 41);
+        height: 100vh;
+    }
+
+    hr {
+        background-color: rgb(41, 41, 41);
+    }
+}

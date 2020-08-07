@@ -7,7 +7,7 @@ import { JwtPayload } from '../models/jwtPayload';
 @Injectable({
   providedIn: 'root'
 })
-export class SeLogadoGuard implements CanActivateChild {
+export class CheckLoginGuard implements CanActivateChild {
 
   jwtHelperService = new JwtHelperService();
 

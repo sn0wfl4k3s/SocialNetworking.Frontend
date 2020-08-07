@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>SocialNet</h2>
+
+    <div class="m-1" *ngFor="let element of elements">
+        <div class="rounded-lg">
+            <div class="mt-2" style="cursor: pointer;">
+                <div class="option-left-sidebar pl-3 pt-3 pr-3" [ngClass]="{'current-option': element.selected}">
+                    <div class="d-flex flex-row" [routerLink]="[element.link]" style="outline: 0;">
+                        
+                        <mat-icon>{{ element.icon }}</mat-icon>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <h3>{{ element.description }}</h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
